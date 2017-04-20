@@ -103,16 +103,21 @@ $(document).ready(function () {
 						}
 				}
 
-	
+	var x;
 function playtime(cinterval) {
 		// body...
-		if (cinterval==0){clearInterval(x);}
+		//if (cinterval==0)
+		//	{
+				clearInterval(x);
+			   $("#mid-col").empty();
+		//	}
+
 			var countDownDate = 30;
 			var now =0;
 			var seconds =0;
 			var distance=0;
 		// Update the count down every 1 second
-		var x = setInterval(function() {
+		x = setInterval(function() {
 
 	  	now = now+1;
 
@@ -140,7 +145,7 @@ function playtime(cinterval) {
 function updateScore() {
 	// body...
 	if ((sc+ls)<=tblquestion.length){
-	$('#score').html("<center><h3>Correct:"+sc+" Wrong:"+ls+"</h3></center>")
+	$('#score').html("<center><h4>Correct:"+sc+" Wrong:"+ls+"</h4></center>")
 	}	
 }
 	//Searching for the correct answer
